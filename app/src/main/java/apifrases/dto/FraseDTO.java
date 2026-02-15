@@ -14,4 +14,5 @@ public class FraseDTO {
     private LocalDate fechaProgramada;
     private String autor;
     private String categoria;
+    private Long visitas;
 }

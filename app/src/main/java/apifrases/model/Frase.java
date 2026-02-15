@@ -43,4 +43,6 @@ public class Frase {
     @JoinColumn(name = "categoria_id", nullable = false)
     @ToString.Exclude
     private Categoria categoria;
+
+    private Long visitas = 0L; 
 }

@@ -19,4 +19,7 @@ public interface FraseRepository extends JpaRepository<Frase, Long> {
 
     Page<Frase> findByCategoriaId(Long categoriaId, Pageable pageable);
 
+   
+    Page<Frase> findByTextoContainingIgnoreCase(String texto, Pageable pageable);
+
 }

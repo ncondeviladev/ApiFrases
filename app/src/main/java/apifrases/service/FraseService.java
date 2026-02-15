@@ -47,10 +47,15 @@ public class FraseService {
      * @param id Identificador de la frase
      * @return FraseDTO
      */
-    @Transactional(readOnly = true)
+    @Transactional //Eliminamos el readOnly
     public FraseDTO buscarPorId(Long id) {
         Frase frase = fraseRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Frase no encontrada con id: " + id));
+
+        //Añadimos el contador
+        frase.setVisitas(frase.getVisitas() + 1);
+        fraseRepository.save(frase);
+
         return mapToDTO(frase);
     }
 
@@ -100,6 +105,18 @@ public class FraseService {
             throw new RuntimeException("Categoría no existe");
         }
         return fraseRepository.findByCategoriaId(catId, pageable).map(this::mapToDTO);
+    }
+
+    /**
+     * Busca frases que contengan un texto.
+     * 
+     * @param texto    Texto a buscar
+     * @param pageable Paginación
+     * @return Pagina de FraseDTO
+     */
+    @Transactional(readOnly = true)
+    public Page<FraseDTO> buscarPorTexto(String texto, Pageable pageable) {
+        return fraseRepository.findByTextoContainingIgnoreCase(texto, pageable).map(this::mapToDTO);
     }
 
     /**
@@ -198,6 +215,7 @@ public class FraseService {
                 frase.getTexto(),
                 frase.getFechaProgramada(),
                 frase.getAutor().getNombre(),
-                frase.getCategoria().getNombre());
+                frase.getCategoria().getNombre(),
+                frase.getVisitas());
     }
 }

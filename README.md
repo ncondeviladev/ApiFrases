@@ -73,3 +73,18 @@ _En resources tenemos data.sql que carga los datos iniciales de la base de datos
 4. **Credenciales**:
    - Usuario: `user` / `admin`
    - Contraseña: `1234`
+
+
+##  Ampliaciones implementadas
+
+Se han desarrollado las siguientes funcionalidades extra:
+1.  **Contador de Visitas**: Campo `visitas` en la entidad Frase que se incrementa automáticamente al consultarla por ID
+
+_Se aprecia el contador en 4 por haber ejecutado la petición 4 veces_
+
+![Visitas](docs/capturas/visitas.png)
+
+2.  **Búsqueda por Texto**: Nuevo endpoint `/api/v1/frases/search?texto=...` para filtrar frases por contenido.
+
+
+![Search](docs/capturas/search.png)

@@ -183,13 +183,15 @@ INSERT INTO
         texto,
         fecha_programada,
         autor_id,
-        categoria_id
+        categoria_id,
+        visitas
     )
 VALUES (
         'La imaginación es más importante que el conocimiento.',
         CURRENT_DATE,
         1,
-        1
+        1,
+        0
     );
 
 -- Frase para MAÑANA (Prueba /frases/dia?fecha=...)
@@ -198,13 +200,15 @@ INSERT INTO
         texto,
         fecha_programada,
         autor_id,
-        categoria_id
+        categoria_id,
+        visitas
     )
 VALUES (
         'En un lugar de la Mancha, de cuyo nombre no quiero acordarme...',
         CURRENT_DATE + 1,
         2,
-        2
+        2,
+        0
     );
 
 -- Frases Cine
@@ -213,13 +217,15 @@ INSERT INTO
         texto,
         fecha_programada,
         autor_id,
-        categoria_id
+        categoria_id,
+        visitas
     )
 VALUES (
         'Le haré una oferta que no podrá rechazar.',
         NULL,
         7,
-        4
+        4,
+        0
     );
 
 INSERT INTO
@@ -227,13 +233,15 @@ INSERT INTO
         texto,
         fecha_programada,
         autor_id,
-        categoria_id
+        categoria_id,
+        visitas
     )
 VALUES (
         'Yo soy tu padre.',
         NULL,
         8,
-        4
+        4,
+        0
     );
 -- Star Wars
 INSERT INTO
@@ -241,13 +249,15 @@ INSERT INTO
         texto,
         fecha_programada,
         autor_id,
-        categoria_id
+        categoria_id,
+        visitas
     )
 VALUES (
         'La vida es como una caja de bombones, nunca sabes lo que te va a tocar.',
         NULL,
         9,
-        4
+        4,
+        0
     );
 -- Forrest Gump
 INSERT INTO
@@ -255,13 +265,15 @@ INSERT INTO
         texto,
         fecha_programada,
         autor_id,
-        categoria_id
+        categoria_id,
+        visitas
     )
 VALUES (
         'Hasta la vista, baby.',
         NULL,
         10,
-        4
+        4,
+        0
     );
 -- Terminator
 
@@ -271,13 +283,15 @@ INSERT INTO
         texto,
         fecha_programada,
         autor_id,
-        categoria_id
+        categoria_id,
+        visitas
     )
 VALUES (
         'Yo solo sé que no sé nada.',
         NULL,
         3,
-        3
+        3,
+        0
     );
 
 INSERT INTO
@@ -285,13 +299,15 @@ INSERT INTO
         texto,
         fecha_programada,
         autor_id,
-        categoria_id
+        categoria_id,
+        visitas
     )
 VALUES (
         'Nada en la vida es para ser temido, es solo para ser comprendido.',
         NULL,
         4,
-        1
+        1,
+        0
     );
 
 INSERT INTO
@@ -299,13 +315,15 @@ INSERT INTO
         texto,
         fecha_programada,
         autor_id,
-        categoria_id
+        categoria_id,
+        visitas
     )
 VALUES (
         'Sé tú mismo, el resto de los papeles ya están cogidos.',
         NULL,
         5,
-        2
+        2,
+        0
     );
 
 INSERT INTO
@@ -313,13 +331,15 @@ INSERT INTO
         texto,
         fecha_programada,
         autor_id,
-        categoria_id
+        categoria_id,
+        visitas
     )
 VALUES (
         'La inteligencia consiste no solo en el conocimiento, sino también en la destreza de aplicar los conocimientos en la práctica.',
         NULL,
         6,
-        3
+        3,
+        0
     );
 
 INSERT INTO
@@ -327,13 +347,15 @@ INSERT INTO
         texto,
         fecha_programada,
         autor_id,
-        categoria_id
+        categoria_id,
+        visitas
     )
 VALUES (
         'La vida es muy peligrosa. No por las personas que hacen el mal, sino por las que se sientan a ver lo que pasa.',
         NULL,
         1,
-        1
+        1,
+        0
     );
 
 INSERT INTO
@@ -341,13 +363,15 @@ INSERT INTO
         texto,
         fecha_programada,
         autor_id,
-        categoria_id
+        categoria_id,
+        visitas
     )
 VALUES (
         'El que lee mucho y anda mucho, ve mucho y sabe mucho.',
         NULL,
         2,
-        2
+        2,
+        0
     );
 
 INSERT INTO
@@ -355,13 +379,15 @@ INSERT INTO
         texto,
         fecha_programada,
         autor_id,
-        categoria_id
+        categoria_id,
+        visitas
     )
 VALUES (
         'Conócete a ti mismo.',
         NULL,
         3,
-        3
+        3,
+        0
     );
 
 -- Frase con fecha fija pasada (prueba query por fecha manual)
@@ -370,13 +396,15 @@ INSERT INTO
         texto,
         fecha_programada,
         autor_id,
-        categoria_id
+        categoria_id,
+        visitas
     )
 VALUES (
         'Mejor es prevenir que curar.',
         '2000-01-01',
         4,
-        1
+        1,
+        0
     );
 
 INSERT INTO
@@ -384,13 +412,15 @@ INSERT INTO
         texto,
         fecha_programada,
         autor_id,
-        categoria_id
+        categoria_id,
+        visitas
     )
 VALUES (
         'Vivir es lo más raro de este mundo, la mayoría de la gente existe, eso es todo.',
         NULL,
         5,
-        2
+        2,
+        0
     );
 
 INSERT INTO
@@ -398,13 +428,15 @@ INSERT INTO
         texto,
         fecha_programada,
         autor_id,
-        categoria_id
+        categoria_id,
+        visitas
     )
 VALUES (
         'Somos lo que hacemos día a día. De modo que la excelencia no es un acto, sino un hábito.',
         NULL,
         6,
-        3
+        3,
+        0
     );
 
 -- Usuarios (Pass: 1234 cifrada con BCrypt)

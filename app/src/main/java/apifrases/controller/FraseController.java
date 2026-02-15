@@ -67,6 +67,18 @@ public class FraseController {
     }
 
     /**
+     * Busca frases por texto.
+     */
+    @GetMapping("/search")
+    public ResponseEntity<Page<FraseDTO>> buscarPorTexto(
+            @RequestParam String texto,
+            @RequestParam(defaultValue = "0") int page,
+            @RequestParam(defaultValue = "10") int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return ResponseEntity.ok(fraseService.buscarPorTexto(texto, pageable));
+    }
+
+    /**
      * Crea nueva frase.
      */
     @PostMapping
